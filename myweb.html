@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="mystyles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon"
+href="fav.gif">
+<title> My portfolio website</title>
+<script>
+function drop() {
+const drop = document.querySelector(".cnt");
+drop.classList.toggle("show");
+drop.style.transition = "width 3s";
+}
+
+function dark() {
+let element = document.body;
+element.classList.toggle ("dark-mode");
+}
+function closeNav() {
+let z = document.querySelector(".cnt");
+z.classList.toggle("show");
+}
+
+function openLink(evt, linkName) {
+let content = document.getElementsByClassName("hidden");
+for (i = 0; i < content.length; i++) {
+content[i].style.display = "none";
+}
+let navLinks = document.getElementsByClassName("nav-links");
+for (i = 0; i < navLinks.length; i++) {
+navLinks[i].classList.add("active");
+//className = navLinks[i].className.replace("active", "");
+}
+
+document.getElementById(linkName).style.display = "block";
+evt.currentTarget.className += "active";
+}
+
+						function colorText() {
+					let colorer = document.getElementById("txtcolor1").value;
+					let p =  document.getElementsByTagName("p");
+					for(i = 0; i < p.length; i++) {
+						p[i].style.color = colorer;
+						}
+						let span = document.getElementsByTagName("h4");
+						for(i = 0; i < span.length; i++) {
+						span[i].style.color = colorer;
+						}
+					}
+					
+					/*function colorTexter() {
+					let colorr = document.getElementById("txtcolor2").value;
+					let down = document.getElementsByClassName("dwn");
+					for(i = 0; i < down.length; i++) {
+						down[i].style.backgroundColor = colorr;
+						}*/
+					
+					
+					function setbg() {
+					const bgg = document.getElementById("bgcolor").value;
+					document.body.style.backgroundColor = bgg;
+					}
+					
+window.onload = () => {
+		 document.getElementById("home").style.display = "block";
+		 document.body.style.transition = "all 2s";
+		}
+		/*let pan = document.getElementsByClassName("dwn");
+		for(i = 0; i < pan.length; i++) {
+		pan.addEventListener("click", () => {
+		this.classList.toggle("shine");
+		let pane = document.querySelector(".pane");
+		if(pane.style.display === "block") {
+		pane.style.display = "none";
+		} else {
+		pane.style.display = "block";
+		}
+		});
+		}*/
+		function display() {
+		let pan = document.querySelector(".dwn");
+		pan.classList.toggle("shine");
+		let pane = document.querySelector(".pane");
+		if(pane.style.display === "block") {
+		pane.style.display = "none";
+		} else {
+		pane.style.display = "block";
+		}
+		}
+
+	
+</script>
+</head>
+<body>
+<div class="container">
+			<div class="header">
+				<h3 class="h1"><span class="e">E</span>ric Alfr<span class="e">e</span>d</h3>
+					<nav>
+						<ul>
+							<li><a onclick="drop()" class="dropdown"> &#9776;</a></li>
+							<div class="cnt">
+								<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+								<li><a onclick="openLink(event, 'home')" id="default" class="nav-links">Home</a></li>
+								<li> <a onclick="openLink(event, 'about')" class="nav-links">About</a></li>
+								<li><a onclick="openLink(event, 'services')" class="nav-links"> Services</a></li>
+								<li><a onclick="openLink(event, 'skills')" class="nav-links">Skills </a></li>
+								<li><a onclick="openLink(event, 'contacts')" class="nav-links"> Contact</a></li>
+								<li><a onclick="dark()" class="nav-links"> Light/Dark</a></li>
+								<li><a onclick="openLink(event, 'settings')" class="nav-links"id="nav-last">Customization </a></li>
+							</div>
+						</ul>
+					</nav>
+		</div>
+			
+						<section id="home"  class="hidden">
+							<div class="content">
+									<div class="c">
+											<img src="laptop.jpg" alt="my pro"  class="bb">
+									<div>
+										<div>
+											<h3> Hello, my name is</h3>
+											<h1 class="h">Eric Alfred</h1>
+											<h4 > I am a <span class="d">Designer</span></h4>
+												<a class="hire"> Hire me </a>
+									</div>
+									</div>
+								</div>
+							 <div class="icons">
+								<span><a href="https://free.facebook.com/eric.alfred" target="_blank"><i class="fa fa-facebook-f"></i></a></span>
+								<span><a href="https://ealfred1.github.io" target="_blank"><i class="fa fa-github"></i></a></span>
+							</div>
+						</div>
+						</section>
+						
+							<section id="about"  class="hidden">
+								<div class="img2">
+							<img src="laptop.jpg" alt="pic" class="bc">
+							</div>
+									<div class="cxxt">
+								<h1 class="hh1"> About Me</h1>
+									<h4 class="hh"> I am a <span class="d">Designer</span></h4>
+											<p class="p">
+											I am a high school student and an aspirant in becoming a full stack developer. 
+											I solve problems by writing lines of code.
+											With my frontend skills I can create responsive website designs and also make
+											an interactive website with my logistics and web animations.
+											I can make a website very responsive and accurate on any device
+											regardlessof their screen sizes.
+											</p>
+											<a class="dwn" href="myweb.html" download> Download</a>
+											</div>
+											</section>
+											
+											<section id="services"  class="hidden">
+												<h1 class="sev"> My Services</h1>
+												<div class="block">
+												<div class="b1">
+												<span class="icon3"> <i class="fab fa-bar"></i></span><br>
+													<h1 class="h-h"> Web Development</h1>
+														<p>
+														 I can create website by utilizing my skills and adding logistics.
+														 All including business, e-commerce, food/restaurant websites etc.
+														 </p>
+														 </div>
+														 
+																<div class="b2">
+																<span class="icon3"><i class="fab fa-chart-line"></i></span><br>
+																	<h1 class="h-h"> Web design UI/UX</h1>
+																		<p>
+																		Designing and enhancing a website's to a needed adjustability is my specialty. 
+																		I can give you a lovely design so that your web user will have great  interaction with it.
+																		</p>
+																		</div>
+																		
+																			<div class="b3">
+																				<span class="icon3"> <i class="fa fa-user"></i></span><br>
+																					<h1 class="h-h"> Programming</h1>
+																						<p>
+																						Aside from my ability to design and develop websites, I can also create programs such as 
+																						games, applications, and more softwares.  Using algorithms and lines of code.
+																						</p>
+																			</div>
+																			</div>
+															</section>
+											
+												
+									 <section id="skills"  class="hidden">
+											<h1 class="h1" id="skills"> My Skills And Improvement</h1>
+												<div class="skills-container">
+													<div class="skills-box">
+														<h4> HTML</h4>
+														<div class="skill-ov">
+														<div class="skill-bar html">
+														<span> 96%</span>
+														</div>
+														</div>
+													</div>
+														<div class="skills-box">
+														<h4> CSS</h4>
+															<div class="skill-ov">
+														<div class="skill-bar css">
+														<span> 90%</span>
+														</div>
+														</div>
+													</div>
+														<div class="skills-box">
+														<h4> JAVASCRIPT</h4>
+															<div class="skill-ov">
+														<div class="skill-bar javascript">
+														<span> 63%</span>
+														</div>
+														</div>
+													</div>
+													
+													<div class="right">
+														<h3> My Creative Skills And Experience</h3>
+														<p>
+															I can utilize my frontend skills to create lovely designs and showcase my creativity and logistics, although still aspire in becoming a full stack developer and soon that will be achieved. I am 2yrs experienced in html and css and will further more in learning and experience with  other languages.
+															</p>
+															<a class="dwn" onclick="display()"> Read More</a>
+												<div class="pane">
+													<p class="p">
+														Also with few years of experience, I can create quality designs with my current frontend skills.
+														And ensure website's interaction reponsiveness.
+													</p>
+												</div>
+															</div>
+															</div>
+															</section>
+									
+									
+									
+									
+															<section id="contacts"  class="hidden">
+															<div class="all-menu">
+																<div class="rep">
+																<h2 > Get In Touch</h2>
+				<p>
+				I am  open to discussions, suggestions, negotiations with any client. You can follow me on my social media handles,  phone, email, or write a text to me.
+				</p>
+				</div>
+					<div class="rep1">
+				<span class="icon3"><i class="fab fa-envelop"></i></span>
+				<span>
+				<h3> Email</h3>
+				<span class="d"> ealfred365@gmail.com</span>
+				</span>
+				</div>
+					<div class="rep2">
+					<span class="icon3"><i class="fab fa-map-marker-alt"></i></span>
+					<div class="add">
+					<h3> Address</h3>
+				<p><span class="d"> Nigeria.</span></p>
+				</div>
+				</div>
+						<div class="rep2">
+						<span class="icon3"><i class="fa fa-phone"></i></span>
+						<div class="add">
+						<h3> Phone </h3>
+						<span class="d"> 08096972320</span><br><br>
+						<span class="d"> 07010363424</span>
+						</div>
+						</div>
+						<div class="f-orm">
+									<form action="http://formsubmit.co/ealfred365@gmail.com" method="POST" id="form1">
+												<h2>Write A Message </h2>
+													<input type="text" placeholder="Name" required><br><br>
+													<input type="email" placeholder="Email Address" required><br><br>
+												<textarea name="message" id="" cols="30" rows="10" placeholder="Write Your Message" required>Message
+											</textarea><br><br>
+								<button type="submit" > Send Message</button>
+						</form>
+						</div>
+						</div>
+						</section>
+						
+						<section id="settings"  class="hidden">
+							<h1> Color Theme</h1>
+							<div class="color">
+								<div class="stt">
+								<span>Text-color:</span>
+									<input type="color" id="txtcolor1" value="#FFFFFF" onchange="colorText()"><br>
+									</div>
+									<!--<div class="stt">
+									<span> Custom text color:</span>
+									<input type="color" id="txtcolor2" value="#00FF00" onchange="colorTexter()">
+									</div>-->
+									</div>
+										<h1> Background Theme</h1>
+											<div class="bgcolor">
+											<div class="stt">
+												<span> Background-color:</span>
+												<input type="color" id="bgcolor" value="#000010" onchange="setbg()">
+												</div>
+												</div>
+												</section>
+									
+						
+						
+											<footer>
+												<p> Created By <span><span class="e">E</span>ric Alfr<span class="e">e</span>d</span> | &copy; 2022 All right reserved</p>
+										</footer>		
+											</div>
+											</body>
+											</html>
