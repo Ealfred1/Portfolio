@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="icon" href="fav.gif" />
+    <link rel="icon" href="iconlogo.png" />
     <meta name="og:title" content="Eric Alfred | Frontend Web Developer" />
     <meta name="og:url" content="https://ealfred1.github.com/ealfred1" />
     <meta name="og:site_name" content="EricAlfred" />
@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <h3 class="h1">
+         <h3 class="h1">
           <span class="e">E</span>ric Alfr<span class="e">e</span>d
         </h3>
         <nav>
@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://github.com/ealfred1" class="nav-links">
+                <a onclick="openLink(event, 'projects')" class="nav-links">
                   Projects
                 </a>
               </li>
@@ -82,25 +82,13 @@
               <div class="half">
                 <h3>Hello, my name is</h3>
                 <h1 class="h">Eric Alfred</h1>
-                <h4 id="type">
+                <h1 id="type">
                   I am a
-                  <span class="d" id="">Web Designer</span>
-                </h4>
+                  <span class="d" id="web">Web Designer</span>
+                </h1>
                 <a class="hire">Hire me</a>
               </div>
             </div>
-          </div>
-          <div class="icons">
-            <span>
-              <a href="https://free.facebook.com/eric.alfred" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </span>
-            <span>
-              <a href="https://github.com/ealfred1" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </span>
           </div>
         </div>
       </section>
@@ -167,6 +155,9 @@
         </div>
       </div>
     </section>
+	
+		<section id="projects" class="hidden">
+		</section>
    
 
       <section id="skills" class="hidden">
@@ -217,15 +208,15 @@
               I can utilize my frontend skills to create lovely designs and
               showcase my creativity and logistics, although still aspire in
               becoming a full stack developer and soon that will be achieved. I
-              am 2yrs experienced in html and css and will further more in
-              learning and experience with other languages.
+              am 2yrs experienced in frontend development and will further more in
+              learning and getting experience with other languages.
             </p>
             <a class="dwn" onclick="display()">Read More</a>
             <div class="pane">
               <p class="p">
                 Also with few years of experience, I can create quality designs
                 with my current frontend skills. And ensure website's
-                interaction reponsiveness.
+                interaction reponsiveness. <span class="d"> I am open open to jobs</span>
               </p>
             </div>
           </div>
@@ -234,6 +225,7 @@
 
       <section id="contacts" class="hidden">
         <div class="all-menu">
+		<div class="column">
           <div class="rep">
             <h2>Get In Touch</h2>
             <p>
@@ -241,6 +233,17 @@
               client. You can follow me on my social media handles, phone,
               email, or write a text to me.
             </p>
+      
+              <a href="https://free.facebook.com/eric.alfred" target="_blank">
+                <span class="icon3"><i class="fa fa-facebook"></i></span>
+              </a>
+
+         
+              <a href="https://github.com/ealfred1" target="_blank">
+                <span class="d"><i class="fa fa-github"></i></span>
+              </a>
+        
+            
           </div>
           <div class="rep1">
             <span class="icon3"><i class="fa fa-envelope"></i></span>
@@ -266,10 +269,12 @@
               <span class="d">+234 | 7010363424</span>
             </div>
           </div>
+		  </div>
+
           <div class="f-orm">
             <h2>Write A Message</h2>
             <form
-              action="http://formsubmit.co/ealfred365@gmail.com"
+              action="https://formsubmit.co/ealfred365@gmail.com"
               method="POST"
             >
               <input type="text" placeholder="Name" name="text" required />
@@ -286,8 +291,10 @@
               <textarea
                 name="message"
                 id="tttxt"
-                placeholder="Write Your Message"
+                placeholder="Write Your Message..."
                 name="textarea"
+                cols="50"
+                rows="10"
                 required
               ></textarea>
               <br />
