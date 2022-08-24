@@ -1,8 +1,8 @@
 function drop() {
-  const drop = document.querySelector('.cnt')
-  drop.classList.toggle('show')
-  drop.style.transition = 'width 3s'
+  document.querySelector(".cnt").style.width = "250px";
+    document.querySelector(".cnt li a").style.dislay = "block";
 }
+
 
 function dark() {
   let element = document.body
@@ -20,8 +20,7 @@ if (localStorage.getItem('darkMode') == 'enabled') {
 }
 
 function closeNav() {
-  let z = document.querySelector('.cnt')
-  z.classList.toggle('show')
+  document.querySelector(".cnt").style.width = "0";
 }
 
 function openLink(evt, linkName) {
@@ -38,23 +37,7 @@ function openLink(evt, linkName) {
   evt.currentTarget.className += 'active'
 }
 
-function colorText() {
-  let colorer = document.getElementById('txtcolor1').value
-  let p = document.getElementsByTagName('p')
-  for (i = 0; i < p.length; i++) {
-    p[i].style.color = colorer
-  }
-  let span = document.getElementsByTagName('h4')
-  for (i = 0; i < span.length; i++) {
-    span[i].style.color = colorer
-  }
-}
 
-function setbg() {
-  const bgg = document.getElementById('bgcolor').value
-  document.body.style.backgroundColor = bgg
-  document.querySelector('.header').style.backgroundColor = bgg
-}
 
 window.onload = () => {
   document.getElementById('home').style.display = 'block'
@@ -71,4 +54,6 @@ function display() {
     pane.style.display = 'block'
   }
 }
+
+
 
